@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CQBLAB</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide-react/0.263.1/umd/lucide-react.min.js"></script>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body class="bg-gray-900">
+    <div id="root">
+        <nav class="bg-black/80 backdrop-blur-md sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-3 flex items-center">
+                <i data-lucide="radiation" class="w-8 h-8 text-red-500 mr-2"></i>
+                <h1 class="text-xl font-bold text-white">㉿CQBLAB</h1>
+                <div class="ml-auto bg-red-900/30 p-2 rounded flex items-center">
+                    <i data-lucide="alert-circle" class="w-4 h-4 mr-2 text-red-400"></i>
+                    <span class="">AI来源：Moonshot</span>
+                </div>
+            </div>
+        </nav>
+
+        
+        <main class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="Screenshot_2025_0219_011013.png" 
+                         alt="（加载失败）" 
+                         class="w-full h-48 object-cover border-b-4 border-red-500">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-white mb-2">原版智障</h2>
+                        <p class="text-gray-400 text-sm mb-4">经典AI智障，他只会嘲讽你</p>
+                        <button onclick="handleDownload('AI页面')" 
+                                class="w-full bg-red-600 hover:bg-red-700 flex items-center justify-center py-2 rounded transition-colors text-white">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+                            点击使用
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="1740042776867.png" 
+                         alt="（加载失败）" 
+                         class="w-full h-48 object-cover border-b-4 border-red-500">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-white mb-2">武士风格</h2>
+                        <p class="text-gray-400 text-sm mb-4">动作行为很像武士</p>
+                        <button onclick="cba('AI页面')" 
+                                class="w-full bg-red-600 hover:bg-red-700 flex items-center justify-center py-2 rounded transition-colors text-white">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+                            点击使用
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="d.png" 
+                         alt="（加载失败）" 
+                         class="w-full h-48 object-cover border-b-4 border-red-500">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-white mb-2">星际风格</h2>
+                        <p class="text-gray-400 text-sm mb-4">来自于未来的AI智能</p>
+                        <button onclick="gta('AI页面')" 
+                                class="w-full bg-red-600 hover:bg-red-700 flex items-center justify-center py-2 rounded transition-colors text-white">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+                            点击使用
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="e.png" 
+                         alt="（加载失败）" 
+                         class="w-full h-48 object-cover border-b-4 border-red-500">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-white mb-2">二战风格</h2>
+                        <p class="text-gray-400 text-sm mb-4">来自于第二次世界大战时的指挥官</p>
+                        <button onclick="gbj('AI页面')" 
+                                class="w-full bg-red-600 hover:bg-red-700 flex items-center justify-center py-2 rounded transition-colors text-white">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+                            点击使用
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="f.png" 
+                         alt="（加载失败）" 
+                         class="w-full h-48 object-cover border-b-4 border-red-500">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-white mb-2">可爱风格</h2>
+                        <p class="text-gray-400 text-sm mb-4">有着甜妹风格</p>
+                        <button onclick="cfa('AI页面')" 
+                                class="w-full bg-red-600 hover:bg-red-700 flex items-center justify-center py-2 rounded transition-colors text-white">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+                            点击使用
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="null.png" 
+                         alt="（加载失败）" 
+                         class="w-full h-48 object-cover border-b-4 border-red-500">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-white mb-2">&#123456789;</h2>
+                        <p class="text-gray-400 text-sm mb-4">Null</p>
+                        <button onclick="kfa('AI页面')" 
+                                class="w-full bg-red-600 hover:bg-red-700 flex items-center justify-center py-2 rounded transition-colors text-white">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+                            点击使用
+                        </button>
+                    </div>
+                </article>
+                
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

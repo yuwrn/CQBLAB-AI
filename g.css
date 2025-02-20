@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #4A90E2;
+    --bg-color: #f5f7fb;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    max-width: 70%;
+    word-break: break-word;
+}
+
+.user-message {
+    background: #e0f7fa;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: #e8f5e9;
+    align-self: flex-start;
+}
+
+.error-message {
+    background: #ffebee;
+    color: #b71c1c;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+}
+
+#userInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#sendBtn {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#sendBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
