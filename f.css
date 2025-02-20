@@ -1,0 +1,146 @@
+            :root {
+            --pink: #FFB6C1;
+            --mint: #98FB98;
+            --cloud: #F0F8FF;
+            --heart: #FF69B4;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--pink) 0%, var(--mint) 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Short Stack', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-house {
+            width: 90%;
+            max-width: 500px;
+            background: var(--cloud);
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chat-house::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 15C30 15 20 35 20 50c0 25 25 35 30 35s30-10 30-35c0-15-10-35-30-35z" fill="%23ff69b4"/></svg>');
+            opacity: 0.2;
+        }
+
+        .message-cloud {
+            height: 65vh;
+            padding: 30px 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .bubble {
+            max-width: 75%;
+            padding: 15px 20px;
+            border-radius: 25px;
+            position: relative;
+            animation: float 0.5s ease-out;
+            filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.1));
+        }
+
+        .cat-bubble {
+            background: white;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+            margin-left: 60px;
+        }
+
+        .cat-bubble::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: url('Screenshot_2025_0219_011013.png') center/cover;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .user-bubble {
+            background: var(--heart);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+
+        .input-area {
+            padding: 20px;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            gap: 10px;
+            border-top: 3px dashed var(--heart);
+        }
+
+        #messageInput {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid var(--pink);
+            border-radius: 25px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        #messageInput:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255,182,193,0.5);
+        }
+
+        #sendBtn {
+            padding: 12px 25px;
+            background: var(--heart);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #sendBtn:hover {
+            transform: scale(1.05) rotate(-5deg);
+        }
+
+        #sendBtn::after {
+            content: '🎀';
+            font-size: 18px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(20px) scale(0.9); opacity: 0; }
+            80% { transform: translateY(-5px) scale(1.05); }
+            100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+        /* 滚动条样式 */
+        .message-cloud::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .message-cloud::-webkit-scrollbar-thumb {
+            background: var(--pink);
+            border-radius: 4px;
+        }
+
+        .message-cloud::-webkit-scrollbar-track {
+            background: rgba(255,182,193,0.2);
+        }

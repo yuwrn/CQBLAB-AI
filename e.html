@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Room 1944</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="e.css" rel="stylesheet"> <!-- 外联CSS -->
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box" id="chatContainer"></div>
+        
+        <div class="input-box">
+            <input type="text" id="userInput" placeholder="ENCODE MESSAGE..." 
+                   onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()" id="sendBtn">
+                <span>TRANSMIT</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="e.js"></script> <!-- 外联JS -->
+</body>
+</html>
